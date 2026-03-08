@@ -19,7 +19,12 @@ interface WayfinderOptions {
 let context: PluginContext;
 
 export const wayfinder = ({
-    patterns = ["routes/**/*.php", "app/**/Http/**/*.php"],
+    patterns = [
+        "routes/**/*.php",
+        "app/**/Http/**/*.php",
+        "Modules/**/routes/**/*.php",
+        "Modules/**/app/**/Http/**/*.php",
+    ],
     actions = true,
     routes = true,
     formVariants = false,
